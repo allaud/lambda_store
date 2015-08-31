@@ -25,7 +25,7 @@ def index():
 def name(lang, method):
     return {'func': METHODS[lang + '/' + method]}
 
-with open('pid' 'w') as f:
+with open('pid', 'w') as f:
         f.write(str(getpid()))
 
 run(host='localhost', port=8122)
