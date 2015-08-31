@@ -1,5 +1,5 @@
 from bottle import route, run, template
-from os import listdir
+from os import listdir, getpid
 
 METHODS = {}
 FUNC_LIST = []
@@ -24,5 +24,8 @@ def index():
 @route('/func/<lang>/<method>')
 def name(lang, method):
     return {'func': METHODS[lang + '/' + method]}
+
+with open('pid' 'w') as f:
+        f.write(str(getpid()))
 
 run(host='localhost', port=8122)
