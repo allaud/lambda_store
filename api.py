@@ -28,4 +28,4 @@ def name(lang, method):
 with open('pid', 'w') as f:
         f.write(str(getpid()))
 
-run(host='localhost', port=8122)
+run(host='0.0.0.0', port=8122)
